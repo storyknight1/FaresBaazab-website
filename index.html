@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fares Hadi Baazab — Electrical &amp; Maintenance Engineer</title>
+<meta name="description" content="Fares Hadi Baazab — Electrical and Maintenance Engineer with 8+ years across building services, facilities and infrastructure. PMP &amp; PMI-RMP certified. Jeddah, Saudi Arabia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15191E;
+    --ink-soft:#3A434C;
+    --paper:#F6F3ED;
+    --paper-2:#EEE9DF;
+    --copper:#B45F2B;
+    --copper-bright:#D67A38;
+    --steel:#3C5A6B;
+    --line:#D7CFC1;
+    --line-dark:#283038;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--copper);color:#fff}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  /* ---- mono utility label ---- */
+  .label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--copper);
+    font-weight:500;
+  }
+
+  /* ---- top bar ---- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,243,237,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;letter-spacing:.04em}
+  .brand .dot{color:var(--copper)}
+  .nav{display:flex;gap:26px}
+  .nav a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.05em;color:var(--ink-soft);transition:color .2s}
+  .nav a:hover{color:var(--copper)}
+  @media(max-width:680px){.nav{display:none}}
+
+  /* ---- hero ---- */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .wrap{padding-top:72px;padding-bottom:64px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1.35fr .9fr;gap:48px;align-items:center}
+  @media(max-width:780px){
+    .hero .wrap{grid-template-columns:1fr;gap:36px;padding-top:48px;padding-bottom:52px}
+    .hero-photo{order:-1;max-width:300px}
+  }
+  /* photo treatment */
+  .hero-photo{position:relative;justify-self:center;width:100%;max-width:360px}
+  .hero-photo .frame{
+    position:relative;border-radius:4px;overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 24px 60px -28px rgba(21,25,30,.55);
+    aspect-ratio:1/1;background:var(--paper-2);
+  }
+  .hero-photo .frame img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.02)}
+  .hero-photo::before{
+    content:"";position:absolute;left:-14px;bottom:-14px;width:78px;height:78px;
+    border-left:3px solid var(--copper);border-bottom:3px solid var(--copper);border-radius:0 0 0 4px;z-index:-1;
+  }
+  .hero-photo::after{
+    content:"";position:absolute;right:-14px;top:-14px;width:78px;height:78px;
+    border-right:3px solid var(--steel);border-top:3px solid var(--steel);border-radius:0 4px 0 0;z-index:-1;
+  }
+  .hero-photo .name-tag{
+    position:absolute;left:14px;bottom:14px;z-index:3;
+    background:rgba(21,25,30,.86);backdrop-filter:blur(4px);
+    color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;
+    padding:7px 11px;border-radius:2px;border-left:2px solid var(--copper);
+  }
+  .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+  .hero-eyebrow .line{height:1px;width:46px;background:var(--copper)}
+  h1{
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:clamp(42px,8vw,86px);
+    line-height:.98;
+    letter-spacing:-.02em;
+    text-transform:uppercase;
+  }
+  h1 .row2{color:var(--copper)}
+  .hero-sub{
+    margin-top:24px;
+    font-size:clamp(16px,2.4vw,20px);
+    max-width:680px;
+    color:var(--ink-soft);
+    font-weight:400;
+  }
+  .hero-meta{
+    margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .chip{
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.03em;
+    padding:7px 13px;border:1px solid var(--line);border-radius:2px;background:#fff;color:var(--ink-soft);
+  }
+  .chip strong{color:var(--ink)}
+  .hero-cta{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{
+    font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.03em;
+    padding:13px 22px;border-radius:2px;transition:.2s;display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+  }
+  .btn-primary{background:var(--ink);color:var(--paper);border:1px solid var(--ink)}
+  .btn-primary:hover{background:var(--copper);border-color:var(--copper)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line-dark)}
+  .btn-ghost:hover{border-color:var(--copper);color:var(--copper)}
+  /* ambient single-line-diagram backdrop */
+  .grid-bg{
+    position:absolute;inset:0;z-index:1;opacity:.5;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 75% 30%,#000 0%,transparent 75%);
+    mask-image:radial-gradient(ellipse 80% 60% at 75% 30%,#000 0%,transparent 75%);
+  }
+
+  /* ---- stat strip ---- */
+  .stats{background:var(--ink);color:var(--paper)}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+  .stat{padding:34px 8px 30px}
+  .stat .num{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(30px,4.4vw,44px);letter-spacing:-.02em;color:var(--copper-bright)}
+  .stat .cap{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9aa4ad;margin-top:8px}
+  @media(max-width:680px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---- section frame ---- */
+  section{padding:80px 0}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:46px;flex-wrap:wrap}
+  .sec-head h2{
+    font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(26px,4vw,40px);
+    letter-spacing:-.01em;text-transform:uppercase;
+  }
+  .sec-num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--copper);font-weight:700}
+
+  /* ---- about ---- */
+  .about{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about p{font-size:clamp(17px,2.5vw,21px);max-width:760px;color:var(--ink);line-height:1.62}
+  .about p .hl{color:var(--copper);font-weight:600}
+
+  /* ---- competencies ---- */
+  .comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .comp{
+    display:flex;align-items:center;gap:11px;padding:13px 15px;background:#fff;border:1px solid var(--line);border-radius:2px;
+    font-size:14px;color:var(--ink-soft);transition:.2s;
+  }
+  .comp:hover{border-color:var(--copper);transform:translateY(-2px)}
+  .comp .tick{width:7px;height:7px;background:var(--copper);flex:0 0 auto;transform:rotate(45deg)}
+
+  /* ---- experience timeline ---- */
+  .xp{position:relative;padding-left:30px}
+  .xp::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .job{position:relative;padding-bottom:46px}
+  .job:last-child{padding-bottom:0}
+  .job::before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--copper)}
+  .job-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+  .job h3{font-family:'Archivo',sans-serif;font-size:21px;font-weight:700;letter-spacing:-.01em}
+  .job .org{color:var(--steel);font-weight:600;font-size:15px;margin-top:2px}
+  .job .when{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);letter-spacing:.02em;white-space:nowrap}
+  .job ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px}
+  .job li{position:relative;padding-left:20px;font-size:14.5px;color:var(--ink-soft)}
+  .job li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--copper)}
+
+  /* ---- two-col block (certs + edu/lang) ---- */
+  .duo{display:grid;grid-template-columns:1.3fr 1fr;gap:54px}
+  @media(max-width:760px){.duo{grid-template-columns:1fr;gap:46px}}
+  .cert-list{display:flex;flex-direction:column;gap:0}
+  .cert-list li{list-style:none;display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .cert-list li:first-child{border-top:1px solid var(--line)}
+  .cert-list .k{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--copper);padding-top:3px;letter-spacing:.05em;flex:0 0 auto}
+  .cert-list .v{font-size:15px;color:var(--ink)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:3px;padding:24px;margin-bottom:18px}
+  .card .label{margin-bottom:14px}
+  .edu-deg{font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.01em}
+  .edu-org{color:var(--steel);font-size:14px;margin-top:3px;font-weight:600}
+  .edu-when{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);margin-top:6px}
+  .lang-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+  .lang-row:last-child{border-bottom:0}
+  .lang-row .l{font-weight:600;font-size:15px}
+  .lang-row .lv{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--copper)}
+
+  /* ---- training pills ---- */
+  .train{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+  .train span{font-size:13px;color:var(--ink-soft);padding:8px 13px;background:var(--paper-2);border:1px solid var(--line);border-radius:20px}
+
+  /* ---- contact ---- */
+  .contact{background:var(--ink);color:var(--paper);border-top:4px solid var(--copper)}
+  .contact .sec-head h2{color:var(--paper)}
+  .contact .c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark)}
+  .contact .c-item{background:var(--ink);padding:26px 4px}
+  .contact .c-item .label{color:var(--copper-bright)}
+  .contact .c-item a,.contact .c-item span{display:block;margin-top:10px;font-size:16px;color:var(--paper);word-break:break-word}
+  .contact .c-item a:hover{color:var(--copper-bright)}
+  @media(max-width:680px){.contact .c-grid{grid-template-columns:1fr}}
+  .contact-lead{font-size:clamp(20px,3.2vw,30px);font-family:'Archivo',sans-serif;font-weight:700;max-width:640px;line-height:1.2;margin-bottom:40px;color:var(--paper)}
+  .contact-lead .hl{color:var(--copper-bright)}
+
+  footer{background:var(--ink);color:#8c959d;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.04em;padding:26px 0;border-top:1px solid var(--line-dark)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">F<span class="dot">.</span>BAAZAB</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#certs">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <span class="line"></span>
+        <span class="label">Electrical &amp; Maintenance Engineer</span>
+      </div>
+      <h1>Fares Hadi<br><span class="row2">Baazab</span></h1>
+      <p class="hero-sub">8+ years keeping electrical systems, building services and facilities reliable, safe and to code — across infrastructure and building projects in Saudi Arabia.</p>
+      <div class="hero-meta">
+        <span class="chip"><strong>PMP</strong> · PMI</span>
+        <span class="chip"><strong>PMI-RMP</strong> · PMI</span>
+        <span class="chip"><strong>SCE</strong> · Professional Engineer</span>
+        <span class="chip">📍 Jeddah, Saudi Arabia</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+966582688715">📞 +966 58 268 8715</a>
+        <a class="btn btn-ghost" href="mailto:fareshadibaazab@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame">
+        <img src="profile.png" alt="Fares Hadi Baazab — Electrical &amp; Maintenance Engineer" loading="eager">
+      </div>
+      <span class="name-tag">FARES H. BAAZAB</span>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">8+</div><div class="cap">Years experience</div></div>
+    <div class="stat"><div class="num">4</div><div class="cap">Companies served</div></div>
+    <div class="stat"><div class="num">5+</div><div class="cap">Certifications</div></div>
+    <div class="stat"><div class="num">IEC/NEC</div><div class="cap">Code compliance</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>Profile</h2>
+    </div>
+    <p>Electrical and Maintenance Engineer skilled in <span class="hl">inspecting, diagnosing and repairing</span> electrical equipment, running preventive and corrective maintenance, and ensuring work meets code and high safety standards. PMP and PMI-RMP certified, with strong coordination and team-supervision skills — ready to support <span class="hl">reliable, safe building operations</span> and an excellent guest experience within a hotel engineering or facilities team.</p>
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<section id="skills">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>Core competencies</h2>
+    </div>
+    <div class="comp-grid">
+      <div class="comp"><span class="tick"></span>Electrical Maintenance &amp; Repair</div>
+      <div class="comp"><span class="tick"></span>Building Services &amp; MEP Support</div>
+      <div class="comp"><span class="tick"></span>Preventive &amp; Corrective Maintenance</div>
+      <div class="comp"><span class="tick"></span>Power Distribution &amp; Lighting</div>
+      <div class="comp"><span class="tick"></span>Testing &amp; Commissioning</div>
+      <div class="comp"><span class="tick"></span>Troubleshooting &amp; Fault Diagnosis</div>
+      <div class="comp"><span class="tick"></span>Health, Safety &amp; Code (IEC/NEC)</div>
+      <div class="comp"><span class="tick"></span>Emergency Response Support</div>
+      <div class="comp"><span class="tick"></span>Inspections &amp; QA/QC</div>
+      <div class="comp"><span class="tick"></span>Shop Drawing &amp; BOQ Review</div>
+      <div class="comp"><span class="tick"></span>Team Supervision</div>
+      <div class="comp"><span class="tick"></span>Stakeholder Coordination</div>
+      <div class="comp"><span class="tick"></span>CMMS / SAP</div>
+      <div class="comp"><span class="tick"></span>PLC Fundamentals</div>
+      <div class="comp"><span class="tick"></span>Guest / Customer Service Mindset</div>
+      <div class="comp"><span class="tick"></span>Microsoft Office</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Experience</h2>
+    </div>
+    <div class="xp">
+      <div class="job">
+        <div class="job-top">
+          <div><h3>Electrical Engineer</h3><div class="org">Profast — Street Lighting Projects · Jeddah</div></div>
+          <div class="when">06/2025 — Present</div>
+        </div>
+        <ul>
+          <li>Supervise installation, inspection and maintenance of street lighting and electrical systems for reliable, safe operation.</li>
+          <li>Coordinate with Jeddah Amanah and project stakeholders to deliver works to specification and on schedule.</li>
+          <li>Ensure compliance with technical specifications, safety standards and applicable codes.</li>
+          <li>Review shop drawings, BOQs and technical documents; support testing, commissioning and handover.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-top">
+          <div><h3>Electrical Engineer</h3><div class="org">Business Innovations Company · Jeddah</div></div>
+          <div class="when">06/2023 — 06/2025</div>
+        </div>
+        <ul>
+          <li>Maintained and repaired electrical systems and building services to IEC and NEC standards, keeping systems continuously reliable.</li>
+          <li>Managed power distribution, load calculations and fault diagnostics to minimise downtime.</li>
+          <li>Led preventive and corrective maintenance and troubleshooting to keep equipment running safely.</li>
+          <li>Coordinated maintenance teams and projects to meet deadlines; reviewed drawings and provided practical solutions.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-top">
+          <div><h3>Electrical Engineer</h3><div class="org">Basalim Company Co. Ltd · Ta'if, Mecca Region</div></div>
+          <div class="when">03/2017 — 06/2023</div>
+        </div>
+        <ul>
+          <li>Oversaw maintenance, inspection and upgrades of building electrical systems and services.</li>
+          <li>Maintained lighting, heating and other building services to keep facilities fully operational.</li>
+          <li>Supervised technicians and craftspeople; scheduled and assigned daily maintenance work.</li>
+          <li>Enforced safe working practices and kept accurate records of electrical changes and maintenance history.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-top">
+          <div><h3>Electrical Engineer Trainee</h3><div class="org">National Water Company (NWC) · Ta'if</div></div>
+          <div class="when">06/2015 — 09/2015</div>
+        </div>
+        <ul>
+          <li>Completed a cooperative training program covering industrial PLC networking and communication.</li>
+          <li>Carried out feasibility studies and supported power generation, transmission and distribution operations.</li>
+          <li>Managed engineering changes using SAP systems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="certs">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>Credentials</h2>
+    </div>
+    <div class="duo">
+      <div>
+        <div class="label" style="margin-bottom:14px">Certifications</div>
+        <ul class="cert-list">
+          <li><span class="k">PMP</span><span class="v">Project Management Professional — PMI, 2025</span></li>
+          <li><span class="k">RMP</span><span class="v">PMI Risk Management Professional — PMI, 2025</span></li>
+          <li><span class="k">SCE</span><span class="v">Saudi Council of Engineers — Professional Electrical Engineer</span></li>
+          <li><span class="k">AMN</span><span class="v">Certified Engineer — Jeddah Amanah</span></li>
+          <li><span class="k">QA/QC</span><span class="v">Certified Quality Engineer / QA-QC Professional</span></li>
+        </ul>
+        <div class="label" style="margin:34px 0 14px">Training</div>
+        <div class="train">
+          <span>Working Safely at Heights</span>
+          <span>Effective Project Management I &amp; II</span>
+          <span>LEED Lab I–III (LEED v4)</span>
+          <span>Sustainable Building Envelope Design</span>
+          <span>Communication in Procurement</span>
+          <span>High Performance for Next-Gen GCC</span>
+          <span>Introduction to BIM</span>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="label">Education</div>
+          <div class="edu-deg">B.Eng. Electrical Engineering</div>
+          <div class="edu-org">Taif University — Saudi Arabia</div>
+          <div class="edu-when">02/2011 — 05/2016</div>
+        </div>
+        <div class="card">
+          <div class="label">Languages</div>
+          <div class="lang-row"><span class="l">English</span><span class="lv">Fluent</span></div>
+          <div class="lang-row"><span class="l">Arabic</span><span class="lv">Native</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <span class="sec-num" style="color:var(--copper-bright)">05</span>
+      <h2>Contact</h2>
+    </div>
+    <p class="contact-lead">Open to <span class="hl">hotel engineering, facilities and maintenance</span> roles. Let's talk.</p>
+    <div class="c-grid">
+      <div class="c-item">
+        <span class="label">Email</span>
+        <a href="mailto:fareshadibaazab@gmail.com">fareshadibaazab@gmail.com</a>
+      </div>
+      <div class="c-item">
+        <span class="label">Phone</span>
+        <a href="tel:+966582688715">+966 58 268 8715</a>
+      </div>
+      <div class="c-item">
+        <span class="label">Location</span>
+        <span>Jeddah, Saudi Arabia 26513</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>FARES HADI BAAZAB</span>
+    <span>ELECTRICAL · MAINTENANCE · FACILITIES</span>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
